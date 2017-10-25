@@ -810,3 +810,7 @@ var swfobject = function () {
 
     };
 }();
+// monkey patch for new versions of chrome
+if (window.chrome) {
+    swfobject.ua.pv = [100, 0, 0];  // we have FP v100, hoorray
+};
